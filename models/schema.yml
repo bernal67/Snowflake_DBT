@@ -1,0 +1,22 @@
+version: 2
+
+models:
+  - name: stg_campaigns
+    columns:
+      - name: campaign_id
+        tests: [not_null, unique]
+      - name: spend
+        tests:
+          - not_null
+          - dbt_utils.expression_is_true:
+              expression: "spend >= 0"
+
+  - name: fct_attribution
+    columns:
+      - name: conv_id
+        tests: [not_null, unique]
+      - name: campaign_id
+        tests: [not_null]
+
+  - name: kpi_marketing
+    description: "Daily marketing KPIs (ROI, CPC, CPA, conv per click)"

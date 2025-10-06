@@ -1,0 +1,4 @@
+campaign_id,campaign_name,channel,start_date,end_date,spend
+1,Summer Launch,search,2024-06-01,2024-06-30,1500
+2,Back to School,social,2024-08-01,2024-08-31,2000
+3,Email Drip,email,2024-07-15,2024-07-31,800
